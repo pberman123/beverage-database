@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>EXAMPLE application for PCF</title>
+<link rel="stylesheet" href="foundation.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<nav class="top-bar">
+		<ul class="title-area">
+			<li class="name">
+				<h1>
+					<a href="./">Bev DB</a>
+				</h1>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<h3>Add Beverages</h3>
+			<hr />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="input">
+			<form action="addBeverage" method="post">
+				Beverage Type: <input type="text" id="bevType" name="bevType"/>
+				Beverage Name:<input type="text" id="name" name="name"/>
+				Vintage Year:<input type="text" id="year" name="year"/>
+				Beverage origin:<input type="text" id="location" name="location"/>
+				<input type="submit" class="medium button" value="Add"/> 
+				<a href="beverages" class="medium button">Cancel</a>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+
+</html>

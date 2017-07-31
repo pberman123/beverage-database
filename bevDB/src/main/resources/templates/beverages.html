@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Beverage database for the makestuffhappen company</title>
+    <link rel="stylesheet" href="foundation.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<nav class="top-bar">
+    <ul class="title-area">
+        <li class="name">
+            <h1>
+                <a href="./">Make Stuff Happen </a>
+            </h1>
+        </li>
+    </ul>
+    <section class="top-bar-section">
+        <ul class="right">
+            <li><a href="./">Home</a></li>
+            <li><a href="beverages">Beverages</a></li>
+            <li><a href="environment">Show Environment</a></li>
+        </ul>
+    </section>
+</nav>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <p th:text="'When running this app on CF The instance index is    ' + ${instanceIndex}"/>
+        </div>
+        <hr/>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="large-12 columns">
+        <h3>Beverages</h3>
+        <hr />
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <table>
+            <thead>
+            <tr>
+                <th>Beverage Type</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Location</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="beverage : ${beverages}">
+                <td th:text="${beverage.bevType}"/>
+                <td th:text="${beverage.name}"/>
+                <td th:text="${beverage.year}"/>
+                <td th:text="${beverage.location}"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <!-- This simply refreshes the page to demonstrate changed (or unchanged) ports -->
+        <a href="addBeverage" class="medium button">Add  Beverage</a>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <!-- This simply refreshes the page to demonstrate changed (or unchanged) ports -->
+        <a href="beverages"
+           class="medium button">Refresh</a>
+
+    </div>
+</div>
+
+
+</body>
+
+</html>

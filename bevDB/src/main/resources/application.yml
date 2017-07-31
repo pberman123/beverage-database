@@ -1,0 +1,9 @@
+server:
+  port: 8090
+logging:
+  level:
+    ROOT: INFO
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
